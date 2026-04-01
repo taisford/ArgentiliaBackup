@@ -34,15 +34,12 @@ function Backups() {
                 {/* Header */}
                 <div className="mb-8">
                     <h1 className="text-4xl font-black text-slate-800 mb-2">Gestión de Respaldos</h1>
-                    <p className="text-slate-600">Monitoreo de backups activos y estado de equipos</p>
                 </div>
 
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                     <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                         <p className="text-slate-500 text-sm font-semibold mb-2">TOTAL RESPALDOS</p>
-                        <p className="text-3xl font-black text-slate-800">{mockBackups.length}</p>
-                        <p className="text-xs text-slate-400 mt-2">Equipos monitoreados</p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                         <p className="text-slate-500 text-sm font-semibold mb-2">EXITOSOS</p>
@@ -68,27 +65,6 @@ function Backups() {
                 </div>
 
                 {/* Gráfico de estado */}
-                <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm mb-8">
-                    <h3 className="font-bold text-slate-800 mb-4">Estado de Backups</h3>
-                    <ResponsiveContainer width="100%" height={300}>
-                        <PieChart>
-                            <Pie
-                                data={backupStatus}
-                                cx="50%"
-                                cy="50%"
-                                innerRadius={70}
-                                outerRadius={110}
-                                paddingAngle={3}
-                                dataKey="value"
-                            >
-                                {backupStatus.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={entry.color} />
-                                ))}
-                            </Pie>
-                            <Tooltip />
-                        </PieChart>
-                    </ResponsiveContainer>
-                </div>
 
                 {/* Tabla de respaldos */}
                 <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
@@ -99,7 +75,7 @@ function Backups() {
                         </h3>
                     </div>
 
-                    <div className="divide-y divide-slate-200 max-h-96 overflow-y-auto">
+                    <div className="divide-y divide-slate-200 h-96 overflow-y-auto">
                         {mockBackups.map((backup) => (
                             <div
                                 key={backup.id}
@@ -152,12 +128,8 @@ function Backups() {
                                         <p className="font-bold text-slate-800">{backup.storageUsed}</p>
                                     </div>
                                     <div>
-                                        <p className="text-xs text-slate-500 uppercase tracking-wide">CPU</p>
-                                        <p className="font-bold text-slate-800">{backup.cpuUsage}%</p>
                                     </div>
                                     <div>
-                                        <p className="text-xs text-slate-500 uppercase tracking-wide">Memoria</p>
-                                        <p className="font-bold text-slate-800">{backup.memoryUsage}%</p>
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-500 uppercase tracking-wide">Última actualización</p>

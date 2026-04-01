@@ -42,7 +42,6 @@ function Users() {
                 <div className="flex items-center justify-between mb-8">
                     <div>
                         <h1 className="text-4xl font-black text-slate-800 mb-2">Gestión de Usuarios</h1>
-                        <p className="text-slate-600">Administra los usuarios registrados en el sistema</p>
                     </div>
                     <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition font-bold shadow-lg">
                         <UserPlus size={20} />

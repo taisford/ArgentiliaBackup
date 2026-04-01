@@ -17,7 +17,7 @@ function Files() {
             <div>
                 {/* Header */}
                 <div className="mb-8">
-                    <h1 className="text-4xl font-black text-slate-800 mb-2">📁 Archivos Maestros del Sistema</h1>
+                    <h1 className="text-4xl font-black text-slate-800 mb-2">Archivos Maestros del Sistema</h1>
                     <p className="text-slate-600">Administra los archivos críticos de respaldo y configuración</p>
                 </div>
 
@@ -54,7 +54,7 @@ function Files() {
                             <div key={idx} className="p-6 hover:bg-slate-50 transition flex items-center justify-between">
                                 <div className="flex items-center gap-4 flex-1">
                                     <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-xl font-bold">
-                                        📄
+                                        <FileText size={18} className="text-blue-600" />
                                     </div>
                                     <div className="flex-1">
                                         <p className="font-bold text-slate-800">{file.name}</p>

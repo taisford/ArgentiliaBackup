@@ -22,7 +22,7 @@ function Home() {
             path: "/administratives",
             icon: ShieldCheck,
             description: "Gestiona permisos y administradores",
-            color: "from-indigo-500 to-indigo-600",
+            color: "from-rose-500 to-rose-600",
             real: true,
         },
         {
@@ -30,15 +30,15 @@ function Home() {
             path: "/users",
             icon: Users,
             description: "Gestiona usuarios del sistema",
-            color: "from-blue-500 to-blue-600",
+            color: "from-orange-500 to-orange-600",
             real: true,
         },
         {
             name: "Respaldos",
             path: "/backups",
             icon: BarChart3,
-            description: "Monitorea backups activos",
-            color: "from-green-500 to-green-600",
+            description: "Monitorea respaldos activos",
+            color: "from-amber-500 to-amber-600",
             real: true,
         },
         {
@@ -46,7 +46,7 @@ function Home() {
             path: "/devices",
             icon: HardDrive,
             description: "Conecta nuevos dispositivos",
-            color: "from-purple-500 to-purple-600",
+            color: "from-sky-500 to-sky-600",
             real: true,
         },
         {
@@ -54,27 +54,27 @@ function Home() {
             path: "/settings",
             icon: Settings,
             description: "Ajusta preferencias del sistema",
-            color: "from-orange-500 to-orange-600",
+            color: "from-cyan-500 to-cyan-600",
             real: true,
         },
         {
             name: "Seguridad",
             icon: Shield,
-            description: "Opciones de seguridad (próximamente)",
+            description: "Opciones de seguridad",
             color: "from-red-500 to-red-600",
             real: false,
         },
         {
             name: "Base de Datos",
             icon: Database,
-            description: "Gestión de datos (próximamente)",
+            description: "Gestión de datos",
             color: "from-cyan-500 to-cyan-600",
             real: false,
         },
         {
             name: "Red",
             icon: Globe,
-            description: "Configuración de red (próximamente)",
+            description: "Configuración de red",
             color: "from-indigo-500 to-indigo-600",
             real: false,
         },
@@ -93,12 +93,6 @@ function Home() {
             <div>
                 {/* Header */}
                 <div className="mb-8">
-                    <h1 className="text-4xl font-black text-slate-800 mb-2">
-                        Panel Principal
-                    </h1>
-                    <p className="text-slate-600">
-                        Bienvenido al centro de control de Backup Pro
-                    </p>
                 </div>
 
                 {/* Stats Cards */}
@@ -147,7 +141,7 @@ function Home() {
                 {/* Modules Grid */}
                 <div className="mb-4">
                     <h2 className="text-lg font-bold text-slate-800 mb-4">
-                        Módulos Disponibles
+                        Módulos
                     </h2>
                 </div>
 
@@ -186,7 +180,6 @@ function Home() {
                                 </p>
                                 {!mod.real && (
                                     <span className="text-xs font-bold text-slate-400 mt-2 inline-block">
-                                        Próximamente
                                     </span>
                                 )}
                             </div>

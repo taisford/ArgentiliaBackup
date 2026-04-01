@@ -1,6 +1,6 @@
 import { Layout } from "../components/Layout";
 import { mockSettings } from "../data/mockData";
-import { Save, RefreshCw } from "lucide-react";
+import { Save, RefreshCw, Shield, Globe, Bell, Database } from "lucide-react";
 import { useState } from "react";
 
 function Settings() {
@@ -39,13 +39,13 @@ function Settings() {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <h1 className="text-4xl font-black text-slate-800 mb-2">⚙️ Configuración del Sistema</h1>
-                        <p className="text-slate-600">Ajusta las preferencias y parámetros globales (interfaz)</p>
+                        <h1 className="text-4xl font-black text-slate-800 mb-2">Configuración del Sistema</h1>
+                        <p className="text-slate-600">Ajusta las preferencias y parámetros globales</p>
                     </div>
                 </div>
 
                 {/* Configuración de Respaldos */}
-                <SettingSection title="Respaldos" icon="💾">
+                <SettingSection title="Respaldos" icon={<Database size={20} className="text-slate-600" />}>
                     <div className="space-y-6">
                         <SettingItem label="Frecuencia de Respaldo" value={mockSettings.backup.frequency} />
                         <SettingItem label="Hora de Ejecución" value={mockSettings.backup.time} />
@@ -55,7 +55,7 @@ function Settings() {
                 </SettingSection>
 
                 {/* Configuración de Seguridad */}
-                <SettingSection title="Seguridad" icon="🔒">
+                <SettingSection title="Seguridad" icon={<Shield size={20} className="text-slate-600" />}>
                     <div className="space-y-6 mb-6">
                         <SettingItem label="Cifrado" value={mockSettings.security.encryption} />
                         <SettingItem label="Autenticación Doble Factor" value={mockSettings.security.twoFactor} />
@@ -65,7 +65,7 @@ function Settings() {
                 </SettingSection>
 
                 {/* Configuración de Red */}
-                <SettingSection title="Red" icon="🌐">
+                <SettingSection title="Red" icon={<Globe size={20} className="text-slate-600" />}>
                     <div className="space-y-6 mb-6">
                         <SettingItem label="Límite de Ancho de Banda" value={mockSettings.network.bandwidthLimit} />
                         <SettingItem label="Protocolo" value={mockSettings.network.protocol} />
@@ -75,7 +75,7 @@ function Settings() {
                 </SettingSection>
 
                 {/* Configuración de Notificaciones */}
-                <SettingSection title="Notificaciones" icon="🔔">
+                <SettingSection title="Notificaciones" icon={<Bell size={20} className="text-slate-600" />}>
                     <div className="space-y-6">
                         {[
                             { label: "Notificaciones por Email", key: "email" },

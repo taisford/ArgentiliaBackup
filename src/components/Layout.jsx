@@ -30,17 +30,18 @@ export function Layout({ children, hideNav = false }) {
             <div
                 className={`${
                     sidebarOpen ? "w-64" : "w-20"
-                } bg-slate-900 text-white transition-all duration-300 flex flex-col overflow-hidden shadow-2xl`}
+                } text-white transition-all duration-300 flex flex-col overflow-hidden shadow-2xl`}
+                style={{ background: "#5c1515" }}
             >
                 {/* Header Sidebar */}
-                <div className="p-6 border-b border-slate-800 flex items-center justify-between">
+                <div className="p-6 flex items-center justify-between" style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
                     <div className={`${sidebarOpen ? "block" : "hidden"} flex items-center gap-3`}>
-                        <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center font-black text-lg">
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center font-black text-lg" style={{ background: "#8C1F1F" }}>
                             🔒
                         </div>
                         <div>
-                            <p className="font-black text-lg">Backup</p>
-                            <p className="text-xs text-slate-400">Pro</p>
+                            <p className="font-black text-lg">Grupo</p>
+                            <p className="text-xs" style={{ color: "rgba(255,255,255,0.6)" }}>Argentilia</p>
                         </div>
                     </div>
                     <button
@@ -60,11 +61,10 @@ export function Layout({ children, hideNav = false }) {
                             <button
                                 key={item.path}
                                 onClick={() => navigate(item.path)}
-                                className={`w-full flex items-center gap-4 px-4 py-3 rounded-lg transition-all ${
-                                    active
-                                        ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
-                                        : "text-slate-300 hover:bg-slate-800 hover:text-white"
-                                }`}
+                                className={`w-full flex items-center gap-4 px-4 py-3 rounded-lg transition-all`}
+                                style={active ? { background: "#8C1F1F", boxShadow: "0 10px 20px rgba(140, 31, 31, 0.3)" } : { color: "rgba(255,255,255,0.7)" }}
+                                onMouseEnter={(e) => !active && (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+                                onMouseLeave={(e) => !active && (e.currentTarget.style.background = "transparent")}
                             >
                                 <Icon size={20} className="flex-shrink-0" />
                                 <span className={`${sidebarOpen ? "block" : "hidden"} font-semibold`}>
@@ -76,10 +76,13 @@ export function Layout({ children, hideNav = false }) {
                 </nav>
 
                 {/* Logout */}
-                <div className="p-4 border-t border-slate-800">
+                <div className="p-4" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
                     <button
                         onClick={() => navigate("/")}
-                        className="w-full flex items-center gap-4 px-4 py-3 rounded-lg text-slate-300 hover:bg-red-600/20 hover:text-red-400 transition-all"
+                        className="w-full flex items-center gap-4 px-4 py-3 rounded-lg transition-all"
+                        style={{ color: "rgba(255,255,255,0.7)" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)", e.currentTarget.style.color = "#ff6b6b")}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = "transparent", e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
                     >
                         <LogOut size={20} className="flex-shrink-0" />
                         <span className={`${sidebarOpen ? "block" : "hidden"} font-semibold`}>Salir</span>
@@ -93,7 +96,7 @@ export function Layout({ children, hideNav = false }) {
                 <div className="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between shadow-sm">
                     <h1 className="text-xl font-black text-slate-800">Panel de Sistema</h1>
                     <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-lg font-bold text-blue-600">
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold" style={{ background: "#f5e6e6", color: "#8C1F1F" }}>
                             👤
                         </div>
                         <div className="text-right">
