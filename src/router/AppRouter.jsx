@@ -10,6 +10,8 @@ import Files from "../pages/Files";
 import SystemMetrics from "../pages/SystemMetrics";
 import Administrative from "../pages/Administrative";
 import UserDetail from "../pages/UserDetail";
+import Terminal from "../pages/Terminal";
+import Logs from "../pages/Logs";
 
 function AppRouter() {
     return (
@@ -25,6 +27,8 @@ function AppRouter() {
                 <Route path="/files" element={<Files />} />
                 <Route path="/system" element={<SystemMetrics />} />
                 <Route path="/administratives" element={<Administrative />} />
+                <Route path="/terminal" element={<Terminal />} />
+                <Route path="/logs" element={<Logs />} />
                 <Route path="/user/:id" element={<UserDetail />} />
                 {/* Rutas por defecto */}
                 <Route path="*" element={<Navigate to="/" />} />

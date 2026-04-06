@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu, LogOut, Home, Users, Inbox, HardDrive, Settings, BarChart3 } from "lucide-react";
+import { Menu, LogOut, Home, Users, Inbox, HardDrive, Settings, BarChart3, Terminal, FileText } from "lucide-react";
 import { useState } from "react";
 
 export function Layout({ children, hideNav = false }) {
@@ -13,6 +13,8 @@ export function Layout({ children, hideNav = false }) {
         { label: "Respaldos", path: "/backups", icon: BarChart3 },
         { label: "Recursos", path: "/system", icon: BarChart3 },
         { label: "Conexión", path: "/devices", icon: Inbox },
+        { label: "Consola", path: "/terminal", icon: Terminal },
+        { label: "Logs", path: "/logs", icon: FileText },
         { label: "Archivos", path: "/files", icon: HardDrive },
         { label: "Configuración", path: "/settings", icon: Settings },
     ];

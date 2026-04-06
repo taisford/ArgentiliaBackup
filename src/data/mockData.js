@@ -183,6 +183,24 @@ export const mockActivityLog = [
     { id: 5, action: "Usuario desactivado", user: "José Martínez", timestamp: "2024-03-28 10:30", status: "warning" },
 ];
 
+export const mockLogs = [
+    { id: 1, timestamp: "2024-04-06 14:28:04", source: "Respaldo", message: "Backup completo para GA-103. 234 archivos guardados.", level: "success" },
+    { id: 2, timestamp: "2024-04-06 14:25:11", source: "Servidor", message: "Conexión SSH establecida desde 192.168.1.45.", level: "info" },
+    { id: 3, timestamp: "2024-04-06 14:23:54", source: "Sistema", message: "Actualización de seguridad aplicada correctamente.", level: "success" },
+    { id: 4, timestamp: "2024-04-06 14:22:10", source: "Respaldo", message: "Advertencia: latencia de red 220ms detectada.", level: "warning" },
+    { id: 5, timestamp: "2024-04-06 14:18:03", source: "Servidor", message: "Uso de CPU 82% en backup.service.", level: "warning" },
+    { id: 6, timestamp: "2024-04-06 14:14:22", source: "Sistema", message: "Usuario admin inició sesión remoto.", level: "info" },
+    { id: 7, timestamp: "2024-04-06 13:58:47", source: "Respaldo", message: "Error en la carga de archivo cliente.db. Reintento automático.", level: "error" },
+    { id: 8, timestamp: "2024-04-06 13:46:12", source: "Servidor", message: "Memoria disponible 28% en servidor principal.", level: "warning" },
+    { id: 9, timestamp: "2024-04-06 13:32:55", source: "Sistema", message: "Cambio en políticas de contraseña aplicada.", level: "success" },
+    { id: 10, timestamp: "2024-04-06 13:18:29", source: "Respaldo", message: "Se inició respaldo incremental para FR-514.", level: "info" },
+    { id: 11, timestamp: "2024-04-06 13:12:08", source: "Servidor", message: "Servicio NGINX reiniciado automáticamente.", level: "success" },
+    { id: 12, timestamp: "2024-04-06 12:58:41", source: "Sistema", message: "Auditoría de acceso completada para usuario María González.", level: "info" },
+    { id: 13, timestamp: "2024-04-06 12:43:17", source: "Respaldo", message: "Timeout al conectar con ZE-781. Se marcará como pendiente.", level: "error" },
+    { id: 14, timestamp: "2024-04-06 12:30:04", source: "Servidor", message: "Nuevo certificado TLS configurado correctamente.", level: "success" },
+    { id: 15, timestamp: "2024-04-06 12:10:11", source: "Sistema", message: "Revisión de integridad de base de datos finalizada.", level: "info" },
+];
+
 export const mockSystemMetrics = [
     { time: "01:00", cpu: 15, memory: 40 },
     { time: "03:00", cpu: 22, memory: 46 },
